@@ -1,0 +1,61 @@
+{
+    "name": "hynek/hynek-laravel-to-zod",
+    "description": "",
+    "keywords": [
+        "hynek",
+        "laravel",
+        "module"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henric Söderlind",
+            "email": "henric.soderlind@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "hynek/hynek-module-tools": "dev-main"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5",
+        "orchestra/testbench": "^7.7|^8.0|^9.0|^10.0",
+        "pestphp/pest": "^1.23|^2.1|^3.1",
+        "phpunit/php-code-coverage": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^9.5.24|^10.5|^11.5",
+        "spatie/pest-plugin-test-time": "^1.1|^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hynek\\LaravelToZod\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hynek\\LaravelToZod\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest --colors=always",
+        "test-coverage": "@test --coverage",
+        "test-dirty": "@test --dirty --compact"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../hynek-module-tools",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
